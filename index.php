@@ -16,9 +16,9 @@
     <div class="container">
 
       <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="index.php">Home</a></li>
+        <li role="presentation" class="active"><a href="#">Home</a></li>
         <li role="presentation"><a href="hello.php">HelloWorld</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
+        <li role="presentation"><a href="assignments.php">Assignments</a></li>
       </ul>
 
       <div class = "jumbotron">

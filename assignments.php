@@ -9,24 +9,26 @@
 
 	  <!-- Latest compiled and minified JavaScript -->
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<title>HelloWorld</title>
+	<title>assignments</title>
 	</head>
 	<body>
 		<div class="container">
 
-			<ul class="nav nav-pills" role="tablist">
-				<li role="presentation"><a href="index.php">Home</a></li>
-				<li role="presentation" class="active"><a href="#">HelloWorld</a></li>
-				<li role="presentation"><a href="assignments.php">Assignments</a></li>
-			</ul>
+  		<ul class="nav nav-pills" role="tablist">
+  			<li role="presentation"><a href="index.php">Home</a></li>
+  			<li role="presentation"><a href="hello.php">HelloWorld</a></li>
+  			<li role="presentation" class="active"><a href="#">Messages</a></li>
+  		</ul>
 
-		<p>Hello World</p>
-
-		<?php
-		for ($num = 1; $num <= 10; $num++ ){
-			echo "<div>This is div tag $num </div>";
-		}
-		?>
+      <div class = "jumbotron">
+        <div class="container">
+          <h1>Jason's Assignments</h1>
+          <p>
+            This page will contain links to all the assingments in my cs313
+            class
+          </p>
+        </div>
+      </div>
 
 		</div>
 	</body>
