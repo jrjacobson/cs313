@@ -12,6 +12,7 @@
 	<title>HelloWorld</title>
 	</head>
 	<body>
+		<div class="container">
 		<ul class="nav nav-pills" role="tablist">
 			<li role="presentation"><a href="index.php">Home</a></li>
 			<li role="presentation" class="active"><a href="hello.php">HelloWorld</a></li>
@@ -23,5 +24,6 @@
 		echo "<div>This is div tag $num </div>";
 	}
 	?>
+		</div>
 	</body>
 </html>

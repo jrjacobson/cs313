@@ -32,19 +32,23 @@
       <div class="row">
         <div class="col-md-8">
           <p>
-            This is my wonderful webpage I will do my best to awh and amaze
+            This is my wonderful web page I will do my best to awe and amaze
             you. First I want to start off by introducing myself.
-            My name is Jason Jaocbson I am a Software Engineering major
-            here at BYU-Idaho. I <strong>love</strong> to write code and goof
-            around on my computer. Strangely I also love to run two summers ago
-            I ran my first two marathons and last summer I competed in my first
-            olimpic distance triatholon. When I have free time I like to get out
-            and do any type of training I can.
+            My name is Jason Jacobson I am a Software Engineering major
+            here at BUY-Idaho. I <strong>love</strong> to write code and goof
+            around on my computer always looking for some new trick. Strangely
+            I also love to run two summers ago I ran my first two marathons and
+            last summer I competed in my first Olympic distance triathlon.
+            To the right is a picture of me and my sister after I finished my
+            first marathon. Sometimes I can't believe that actually happed.
+            When I have free time I like to get out and do any type of training
+            I can. I also really love to hike the more time I can spend up on
+            top of a mountain the better.
           </p>
         </div>
         <div class="col-md-4">
           <a href="#" class="thumbnail">
-            <img src="jasonTraciMesaFalls.jpg" alt="Traci and Jason at mesa falls marathon">
+            <img src="https://scontent-sea1-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/10614278_10101566458511559_2088256542744242551_n.jpg?oh=6363aa63714c9905eb3668f2d37e5e1c&oe=56FB2F00" alt="Traci and Jason at mesa falls marathon">
           </a>
         </div>
       </div>
