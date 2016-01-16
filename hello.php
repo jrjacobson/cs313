@@ -16,8 +16,8 @@
 
 			<ul class="nav nav-pills" role="tablist">
 				<li role="presentation"><a href="index.php">Home</a></li>
-				<li role="presentation" class="active"><a href="#">HelloWorld</a></li>
 				<li role="presentation"><a href="assignments.php">Assignments</a></li>
+				<li role="presentation" class="active"><a href="#">HelloWorld</a></li>
 			</ul>
 
 		<p>Hello World</p>

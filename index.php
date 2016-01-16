@@ -4,8 +4,11 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-  <!-- theme -->
+  <!-- bootstrap theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- my theme -->
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
 
   <!-- lightbox -->
   <link href="dist/css/lightbox.css" rel="stylesheet">
@@ -24,13 +27,14 @@
   <body>
     <div class="container">
 
-      <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="hello.php">HelloWorld</a></li>
-        <li role="presentation"><a href="assignments.php">Assignments</a></li>
-      </ul>
-
-      <div class = "jumbotron">
+      <div class="green navbar-nav space">
+        <ul class="nav nav-pills" role="tablist">
+          <li role="presentation" class="active"><a href="#">Home</a></li>
+          <li role="presentation"><a href="assignments.php">Assignments</a></li>
+            <li role="presentation"><a href="hello.php">HelloWorld</a></li>
+        </ul>
+      </div>
+      <div class = "jumbotron text-center">
         <div class="container">
           <h1>Welcome to Jason's Homepage</h1>
           <p>This hompage is mostly for demonstration and will be used to
@@ -38,22 +42,17 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-8">
-          <p>
-            &emsp;This is my wonderful web page I will do my best to awe and amaze
-            you. First I want to start off by introducing myself.
-            My name is Jason Jacobson I am a Software Engineering major
-            here at BUY-Idaho. I <strong>love</strong> to write code and goof
-            around on my computer always looking for some new trick. Strangely
-            I also love to run two summers ago I ran my first two marathons and
-            last summer I competed in my first Olympic distance triathlon.
-            To the right is a picture of me and my sister after I finished my
-            first marathon. Sometimes I can't believe that actually happed.
-            When I have free time I like to get out and do any type of training
-            I can. I also really love to hike the more time I can spend up on
-            top of a mountain the better.
-          </p>
+      <div class="row extra-padding">
+
+        <div class="col-md-4">
+          <h4>
+            &emsp;This is my wonderful web page I will do my best to awe and amaze you. Well are you not amazed? Oooh Ahhhw. First I want to start off by introducing myself. My name is Jason Jacobson I am a Software Engineering major at BUY-Idaho. I <strong>love</strong> to write code and goof around with new stuff on my computer I'm always looking for some new trick or for my wife to make fun of me for knowing.Strangely I also love to run two summers ago I ran my first two marathons and last summer I competed in my first Olympic distance triathlon.
+          </h4>
+        </div>
+        <div class ="col-md-4">
+          <h4>
+            &emsp;The picture on this page is a picture of my sister and I after I finished my first marathon. Wahoo I finish first in my age group!! Sometimes I can't believe that actually happed. I also really like to take pictures so I decided to include some If you want to see a cupple more pictures click on it and see the magic.When I have free time I like to get out and do any type of training I can. I also really love to hike the more time I can spend up on top of a mountain the better.
+          </h4>
         </div>
 
         <div class="col-md-4">
@@ -75,10 +74,14 @@
               </a>
             </div>
 
-
         </div>
       </div>
-
+    <hr>
+    <div class="row">
+    <p class="center">
+      Web Page design by: Jason Jacobson
+    </p>
+    </div>
     </div>
     <script src="dist/js/lightbox-plus-jquery.js"></script>
   </body>
