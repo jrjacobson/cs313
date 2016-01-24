@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION['voted']) && $_SESSION['voted'] == true){
-	header("Location:getvote.php");
+	header("Location:getVote.php");
 	//window.location.href = "vote.php";
 }
 else{
