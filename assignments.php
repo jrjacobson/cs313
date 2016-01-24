@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,6 +15,11 @@
 
 	  <!-- Latest compiled and minified JavaScript -->
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script>
+			function checkVote(){
+
+			}
+		</script>
 	<title>assignments</title>
 	</head>
 	<body>
@@ -25,6 +33,7 @@
 						<li role="presentation"><a href="hello.php">HelloWorld</a></li>
 					</ul>
 	      </div>
+
 	      <div class = "jumbotron text-center">
         <div class="container">
           <h1>Jason's Assignments</h1>
@@ -35,6 +44,11 @@
         </div>
       </div>
 
+			<div class="row">
+				<div class="col-md-12">
+					<a href="getVote.php">My Poll</a>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
