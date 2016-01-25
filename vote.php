@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +18,22 @@
   <title>Voteing Results</title>
 </head>
 <body>
+<div class="container">
+
+    <div class="green navbar-nav space">
+      <ul class="nav nav-pills" role="tablist">
+        <li role="presentation"><a href="index.php">Home</a></li>
+        <li role="presentation"><a href="assignments.php">Assignments</a></li>
+          <li role="presentation"><a href="hello.php">HelloWorld</a></li>
+      </ul>
+    </div>
+    <div class = "jumbotron text-center">
+      <div class="container">
+        <h1>Pizza Poll Results</h1>
+        <p>This page displays form information using php</p>
+      </div>
+    </div>
+
 <?php
 //get content of textfile
 $filename = "result.txt";
@@ -106,140 +125,141 @@ $fp = fopen($filename,"w");
 fputs($fp,$insertvote);
 fclose($fp);
 ?>
+  <div class="row">
+    <table>
 
-<h2>Result:</h2>
-<table>
+      <tr>
+        <th colspan="2">Favorite Restaurant</th>
+        <th colspan="2">Favorite Crust Type</th>
+        <th colspan="2">Favorite Topping</th>
+        <th colspan="2">Favorite Dinning Choice</th>
+      </tr>
 
-  <tr>
-    <th colspan="2">Favorite Restaurant&nbsp</th>
-    <th colspan="2">Favorite Crust Type&nbsp</th>
-    <th colspan="2">Favorite Topping&nbsp</th>
-    <th colspan="2">Favorite Dinning Choice&nbsp</th>
-  </tr>
+      <tr>
+        <td>Dominoes</td>
+        <td>
+          <?php
+          //echo "$dominoes";
+          echo (100*round($dominoes/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
+          ?>%
+        </td>
+        <td>Deep Dish</td>
+        <td>
+          <?php
+          echo (100*round($deepDish/($deepDish+$normalCrust+$thinCrust),2));
+          ?>%
+        </td>
+        <td>Pepperoni</td>
+        <td>
+          <?php
+          echo (100*round($pepperoni/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
+          ?>%
+        </td>
+        <td>Take Out</td>
+        <td>
+          <?php
+          echo (100*round($takeOut/($takeOut+$delivery+$dineIn),2));
+          ?>%
+        </td>
+      </tr>
 
-  <tr>
-    <td>Dominoes</td>
-    <td>
-      <?php
-      //echo "$dominoes";
-      echo (100*round($dominoes/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
-      ?>%
-    </td>
-    <td>Deep Dish</td>
-    <td>
-      <?php
-      echo (100*round($deepDish/($deepDish+$normalCrust+$thinCrust),2));
-      ?>%
-    </td>
-    <td>Pepperoni</td>
-    <td>
-      <?php
-      echo (100*round($pepperoni/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
-      ?>%
-    </td>
-    <td>Take Out</td>
-    <td>
-      <?php
-      echo (100*round($takeOut/($takeOut+$delivery+$dineIn),2));
-      ?>%
-    </td>
-  </tr>
+      <tr>
+        <td>Pizza Hut</td>
+        <td>
+          <?php
+          //echo "$pizzaHut";
+          echo (100*round($pizzaHut/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
+          ?>%
+        </td>
+        <td>Normal</td>
+        <td>
+          <?php
+          echo (100*round($normalCrust/($deepDish+$normalCrust+$thinCrust),2));
+          ?>%
+        </td>
+        <td>Sausage</td>
+        <td>
+          <?php
+          echo (100*round($sausage/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
+          ?>%
+        </td>
+        <td>Delivery</td>
+        <td>
+          <?php
+          echo (100*round($delivery/($takeOut+$delivery+$dineIn),2));
+          ?>%
+        </td>
+      </tr>
 
-  <tr>
-    <td>Pizza Hut</td>
-    <td>
-      <?php
-      //echo "$pizzaHut";
-      echo (100*round($pizzaHut/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
-      ?>%
-    </td>
-    <td>Normal</td>
-    <td>
-      <?php
-      echo (100*round($normalCrust/($deepDish+$normalCrust+$thinCrust),2));
-      ?>%
-    </td>
-    <td>Sausage</td>
-    <td>
-      <?php
-      echo (100*round($sausage/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
-      ?>%
-    </td>
-    <td>Delivery</td>
-    <td>
-      <?php
-      echo (100*round($delivery/($takeOut+$delivery+$dineIn),2));
-      ?>%
-    </td>
-  </tr>
+      <tr>
+        <td>Papa Johns</td>
+        <td>
+          <?php
+          //echo "$papaJohn";
+          echo (100*round($papaJohn/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
+          ?>%
+        </td>
+        <td>Thin</td>
+        <td>
+          <?php
+          echo (100*round($thinCrust/($deepDish+$normalCrust+$thinCrust),2));
+          ?>%
+        </td>
+        <td>Peppers</td>
+        <td>
+          <?php
+          echo (100*round($peppers/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
+          ?>%
+        </td>
+        <td>Dine In</td>
+        <td>
+          <?php
+          echo (100*round($dineIn/($takeOut+$delivery+$dineIn),2));
+          ?>%
+        </td>
+      </tr>
 
-  <tr>
-    <td>Papa Johns</td>
-    <td>
-      <?php
-      //echo "$papaJohn";
-      echo (100*round($papaJohn/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
-      ?>%
-    </td>
-    <td>Thin</td>
-    <td>
-      <?php
-      echo (100*round($thinCrust/($deepDish+$normalCrust+$thinCrust),2));
-      ?>%
-    </td>
-    <td>Peppers</td>
-    <td>
-      <?php
-      echo (100*round($peppers/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
-      ?>%
-    </td>
-    <td>Dine In</td>
-    <td>
-      <?php
-      echo (100*round($dineIn/($takeOut+$delivery+$dineIn),2));
-      ?>%
-    </td>
-  </tr>
+      <tr>
+        <td>Little Caesars</td>
+        <td>
+          <?php
+          //echo "$littleCeasars";
+          echo (100*round($littleCeasars/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
+          ?>%
+        </td>
+        <td></td>
+        <td></td>
+        <td>Olives</td>
+        <td>
+          <?php
+          echo (100*round($olives/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
+          ?>%
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
 
-  <tr>
-    <td>Little Caesars</td>
-    <td>
-      <?php
-      //echo "$littleCeasars";
-      echo (100*round($littleCeasars/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
-      ?>%
-    </td>
-    <td></td>
-    <td></td>
-    <td>Olives</td>
-    <td>
-      <?php
-      echo (100*round($olives/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
-      ?>%
-    </td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Pizza Pie</td>
-    <td>
-      <?php
-      //echo "$pizzaPie";
-      echo (100*round($pizzaPie/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
-      ?>%
-    </td>
-    <td></td>
-    <td></td>
-    <td>Mushrooms</td>
-    <td>
-      <?php
-      echo (100*round($mushrooms/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
-      ?>%
-    </td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+      <tr style="border-bottom-style: solid;">
+        <td>Pizza Pie</td>
+        <td>
+          <?php
+          //echo "$pizzaPie";
+          echo (100*round($pizzaPie/($dominoes+$pizzaHut+$papaJohn+$littleCeasars+$pizzaPie),2));
+          ?>%
+        </td>
+        <td></td>
+        <td></td>
+        <td>Mushrooms</td>
+        <td>
+          <?php
+          echo (100*round($mushrooms/($pepperoni+$peppers+$sausage+$olives+$mushrooms),2));
+          ?>%
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</div>
 </body>
 </html>

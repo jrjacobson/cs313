@@ -30,37 +30,50 @@ if(isset($_SESSION["voted"]) && $_SESSION["voted"] == true){
 	<title>php poll</title>
 </head>
 <body>
+<div class="container">
+		<div class="green navbar-nav space">
+			<ul class="nav nav-pills" role="tablist">
+				<li role="presentation"><a href="index.php">Home</a></li>
+				<li role="presentation"><a href="assignments.php">Assignments</a></li>
+					<li role="presentation"><a href="hello.php">HelloWorld</a></li>
+			</ul>
+		</div>
+		<div class = "jumbotron text-center">
+			<div class="container">
+				<h1>Welcome to Jason's Pizza Poll</h1>
+				<p>This page uses html forms and php sessions</p>
+			</div>
+		</div>
+		<div>
+	  <form id = "myForm" action = "vote.php" method = "POST">
+	    <h3>What pizza place do you like most?</h3>
+	    <input type="radio" name="restaurant" value="0">Dominoes<br>
+	    <input type="radio" name="restaurant" value="1">Pizza Hut<br>
+	    <input type="radio" name="restaurant" value="2">Papa John's<br>
+	    <input type="radio" name="restaurant" value="3">Little Caesars<br>
+	    <input type="radio" name="restaurant" value="4">Pizza Pie<br>
 
-<div>
-  <form id = "myForm" action = "vote.php" method = "POST">
-    <h3>What pizza place do you like most?</h3>
-    <input type="radio" name="restaurant" value="0">Dominoes<br>
-    <input type="radio" name="restaurant" value="1">Pizza Hut<br>
-    <input type="radio" name="restaurant" value="2">Papa John's<br>
-    <input type="radio" name="restaurant" value="3">Little Caesars<br>
-    <input type="radio" name="restaurant" value="4">Pizza Pie<br>
-
-    <h3>What type of pizza crust do you prefer?</h3>
-    <input type="radio" name="crust" value="0">Deep Dish<br>
-    <input type="radio" name="crust" value="1">Normal<br>
-    <input type="radio" name="crust" value="2">Thin<br>
+	    <h3>What type of pizza crust do you prefer?</h3>
+	    <input type="radio" name="crust" value="0">Deep Dish<br>
+	    <input type="radio" name="crust" value="1">Normal<br>
+	    <input type="radio" name="crust" value="2">Thin<br>
 
 
-    <h3>What pizza topping do you like most?</h3>
-    <input type="radio" name="toppings" value="0">Pepperoni<br>
-    <input type="radio" name="toppings" value="1">Sausage<br>
-    <input type="radio" name="toppings" value="2">Peppers<br>
-    <input type="radio" name="toppings" value="3">Olives<br>
-    <input type="radio" name="toppings" value="4">Mushrooms<br>
+	    <h3>What pizza topping do you like most?</h3>
+	    <input type="radio" name="toppings" value="0">Pepperoni<br>
+	    <input type="radio" name="toppings" value="1">Sausage<br>
+	    <input type="radio" name="toppings" value="2">Peppers<br>
+	    <input type="radio" name="toppings" value="3">Olives<br>
+	    <input type="radio" name="toppings" value="4">Mushrooms<br>
 
-    <h3>How do you prefer to dine when getting pizza? </h3>
-    <input type="radio" name="dine" value="0">Take Out<br>
-    <input type="radio" name="dine" value="1">Delivery<br>
-    <input type="radio" name="dine" value="2">Dine In<br>
-    <input type = "submit">
-		<button href= "vote.php">Results</button>
-  </form>
+	    <h3>How do you prefer to dine when getting pizza? </h3>
+	    <input type="radio" name="dine" value="0">Take Out<br>
+	    <input type="radio" name="dine" value="1">Delivery<br>
+	    <input type="radio" name="dine" value="2">Dine In<br>
+	    <input type = "submit">
 
+	  </form>
+		<button><a href="vote.php">Results</a></button>
+	</div>
 </div>
-
 </body>

@@ -39,7 +39,7 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<a href="getVote.php">My Poll</a>
+					<a href="getVote.php">My Pizza Poll</a>
 				</div>
 			</div>
 		</div>
