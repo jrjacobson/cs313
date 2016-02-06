@@ -94,7 +94,7 @@
       </tr>';
     }
     echo "</table>";
-/*
+
     $sql = "INSERT INTO sport (title) values (Run)";
     $sql += "INSERT INTO sport (title) values (Bike)";
     $sql += "INSERT INTO sport (title) values (Swim)";
@@ -107,7 +107,7 @@
     $sql += "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (1, 1, 1, 35, '2016-02-02 13:43:00', 5, 40, 'I had a great run!')";
     $sql += "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (1, 1, 1, 40, '2016-03-02 13:43:00', 6, 47, 'Another great run!')";
     $db->exec($sql);
-
+/*
     for($i = -20; $i < 111; $i++)
     {
       $sql = "INSERT INTO temp (temp) values ($i)";
