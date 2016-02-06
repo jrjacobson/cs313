@@ -8,14 +8,14 @@
   ini_set('display_errors', 'On');
   try
   {
-    /*
+    
     $dbHost = "localhost";
     $dbUser = "jrjaco86";
     $dbPassword = "help123";
     $dbName = "workoutlog";
     $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
-    */
-    $db = new PDO('mysql:host=127.5.211.130:3306;dbname=php,' jrjaco86, help123);
+
+    //$db = new PDO('mysql:host=127.5.211.130:3306;dbname=php,' jrjaco86, help123);
     //working with the database
     $MAX_WORKOUTS = 1000;
     $currentUserEmail = "jrjacob@gmail.com";
