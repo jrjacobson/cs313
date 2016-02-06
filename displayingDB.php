@@ -94,7 +94,7 @@
       </tr>';
     }
     echo "</table>";
-
+/*
     $sql = "INSERT INTO sport (title) values (Run)";
     $sql += "INSERT INTO sport (title) values (Bike)";
     $sql += "INSERT INTO sport (title) values (Swim)";
