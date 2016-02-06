@@ -12,7 +12,7 @@
     $dbUser = "";
     $dbPassword = "";
     $dbName = "";
-
+/*
     $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
 
     if ($openShiftVar === null || $openShiftVar == "")
@@ -23,13 +23,13 @@
       $dbName = "workoutlog";
     }
     else
-    {
-      $dbHost = getenv('127.5.211.130');
-      $dbPort = getenv('3306');
-      $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-      $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+    {*/
+      $dbHost = 127.5.211.130;
+      $dbPort = 3306;
+      $dbUser = jrjaco86;
+      $dbPassword = help123;
       $dbName = "php";
-    }
+    //}
     $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbuser, $dbpassword);
 
     //working with the database
