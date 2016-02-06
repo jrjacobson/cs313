@@ -8,11 +8,10 @@
   ini_set('display_errors', 'On');
   try
   {
-    
-    $dbHost = "localhost";
+    $dbHost = "127.5.211.130";
     $dbUser = "jrjaco86";
     $dbPassword = "help123";
-    $dbName = "workoutlog";
+    $dbName = "php";
     $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
 
     //$db = new PDO('mysql:host=127.5.211.130:3306;dbname=php,' jrjaco86, help123);
