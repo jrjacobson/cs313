@@ -26,7 +26,7 @@
       $dbPassword = "5kkZVDheksd3";
       $dbName = "php";
     //}
-    $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbuser, $dbpassword);
+    $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
 
     //working with the database
     $MAX_WORKOUTS = 1000;
