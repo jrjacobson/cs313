@@ -3,7 +3,21 @@
 <head>
 </head>
 <body>
-  <?php
+  <div class="container">
+    <div class="green navbar-nav space">
+      <ul class="nav nav-pills" role="tablist">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="assignments.php">Assignments</a></li>
+          <li role="presentation"><a href="hello.php">HelloWorld</a></li>
+      </ul>
+    </div>
+    <div class = "jumbotron text-center">
+      <div class="container">
+        <h1>Welcome to Jason's Workout Log</h1>
+        <p>Here you can see all of your logged workouts</p>
+      </div>
+    </div>
+<?php
   error_reporting(E_ALL);
   ini_set('display_errors', 'On');
   try
@@ -107,7 +121,6 @@
     $sql += "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (1, 1, 1, 35, '2016-02-02 13:43:00', 5, 40, 'I had a great run!')";
     $sql += "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (1, 1, 1, 40, '2016-03-02 13:43:00', 6, 47, 'Another great run!')";
     $db->exec($sql);
-/*
     for($i = -20; $i < 111; $i++)
     {
       $sql = "INSERT INTO temp (temp) values ($i)";
@@ -120,6 +133,7 @@
      echo 'Error!: ' . $ex->getMessage();
      die();
   }
-  ?>
+?>
+  </div>
 </body>
 </html>
