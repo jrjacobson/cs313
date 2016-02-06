@@ -8,6 +8,7 @@
   ini_set('display_errors', 'On');
   try
   {
+    /*
     $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
 
     if ($openShiftVar === null || $openShiftVar == "")
@@ -27,11 +28,10 @@
       */
       $dbHost = "127.5.211.130";
       $dbPort = "3306";
-      $dbUser = "jrjaco86";
-      $dbPassword = "help123";
-      */
+      $dbUser = "adminKfCTL19@127.5.211.130";
+      $dbPassword = "5kkZVDheksd3";
       $dbName = "php";
-    }
+    //}
     $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
 
     //working with the database
