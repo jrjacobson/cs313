@@ -6,10 +6,33 @@
   <?php
   try
   {
+    //db login stuff
+    $dbHost = "";
+    $dbPort = "";
+    $dbUser = "";
+    $dbPassword = "";
+    $dbName = "";
+
+    $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
+
+    if ($openShiftVar === null || $openShiftVar == "")
+    {
+      $dbHost = "localhost";
+      $dbUser = "jrjaco86";
+      $dbPassword = "help123";
+      $dbName = "workoutlog";
+    }
+    else
+    {
+      $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+      $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT'); 
+      $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+      $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+    }
+    $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbuser, $dbpassword);
+
+    //working with the database
     $MAX_WORKOUTS = 1000;
-    $user = 'jrjaco86';
-    $password = 'help123';
-    $server = "127.5.211.130";
     $currentUserEmail = "jrjacob@gmail.com";
     $userName;
     $sport[$MAX_WORKOUTS] = "";
@@ -20,8 +43,6 @@
     $duration[$MAX_WORKOUTS] = 0;
     $journal[$MAX_WORKOUTS] = "";
     $rowIndex = 0;
-
-    $db = new PDO('mysql:host=localhost;dbname=workoutlog', $user, $password);
 
     $queryString = "SELECT * FROM user JOIN workout ON user.id
     = workout.userId WHERE user.userEmail ='". $currentUserEmail."'";
