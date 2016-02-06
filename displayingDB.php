@@ -28,9 +28,9 @@
       */
       $dbHost = "127.5.211.130";
       $dbPort = "3306";
-      $dbUser = "adminKfCTL19@127.5.211.130";
-      $dbPassword = "5kkZVDheksd3";
-      $dbName = "php";
+      $dbUser = "jrjaco86";
+      $dbPassword = "help123";
+      $dbName = "jrjaco86";
     //}
     $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
 
