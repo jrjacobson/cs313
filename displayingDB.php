@@ -15,8 +15,7 @@
     $dbName = "workoutlog";
     $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
     */
-    $db = mysqli_connect(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'), "", getenv('OPENSHIFT_MYSQL_DB_PORT')) or die("Error: " . mysqli_error($mysqlCon));
-
+    $db = new PDO(mysql:host='127.5.211.130:3306';dbname='php', 'jrjaco86', 'help123')
     //working with the database
     $MAX_WORKOUTS = 1000;
     $currentUserEmail = "jrjacob@gmail.com";
