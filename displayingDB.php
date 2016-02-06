@@ -27,8 +27,8 @@
       */
       $dbHost = "127.5.211.130";
       $dbPort = "3306";
-      $dbUser = "adminKfCTL19";
-      $dbPassword = "5kkZVDheksd3";
+      $dbUser = "jrjaco86";
+      $dbPassword = "help123";
       */
       $dbName = "php";
     }
