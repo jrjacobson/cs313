@@ -94,7 +94,7 @@
       </tr>';
     }
     echo "</table>";
-
+/*
     $sql = "INSERT INTO sport (title) values (Run)";
     $sql += "INSERT INTO sport (title) values (Bike)";
     $sql += "INSERT INTO sport (title) values (Swim)";
@@ -113,7 +113,7 @@
       $sql = "INSERT INTO temp (temp) values ($i)";
       $db->exec($sql);
     }
-
+*/
   }
   catch (PDOException $ex)
   {
