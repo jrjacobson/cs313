@@ -9,29 +9,23 @@
   try
   {
     /*
-    $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
+    $dbHost = "localhost";
+    $dbUser = "jrjaco86";
+    $dbPassword = "help123";
+    $dbName = "workoutlog";
+    */
+    define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+    define('DB_PORT', getenv('OPENSHIFT_MYSQL_DB_PORT'));
+    define('DB_USER', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+    define('DB_PASS', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+    define('DB_NAME', getenv('OPENSHIFT_GEAR_NAME'));
 
-    if ($openShiftVar === null || $openShiftVar == "")
-    {
-      $dbHost = "localhost";
-      $dbUser = "jrjaco86";
-      $dbPassword = "help123";
-      $dbName = "workoutlog";
-    }
-    else
-    {
-      /*
-      $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
-      $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
-      $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-      $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-      */
-      $dbHost = "127.5.211.130";
-      $dbPort = "3306";
-      $dbUser = "jrjaco86";
-      $dbPassword = "help123";
-      $dbName = "jrjaco86";
-    //}
+    $dbHost = constant("DB_HOST"); // Host name
+    $dbPort = constant("DB_PORT"); // Host port
+    $dbUser = constant("DB_USER"); // Mysql username
+    $dbPassword = constant("DB_PASS"); // Mysql password
+    $dbName = constant("DB_NAME"); // Database name
+
     $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
 
     //working with the database
