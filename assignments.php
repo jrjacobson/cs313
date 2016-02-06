@@ -31,8 +31,7 @@
         <div class="container">
           <h1>Jason's Assignments</h1>
           <p>
-            This page will contain links to all the assingments in my cs313
-            class
+             CS 313 assingments
           </p>
         </div>
       </div>
@@ -40,6 +39,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<a href="getVote.php">My Pizza Poll</a>
+					<a href="displayingDB.php">DB Display</a>
 				</div>
 			</div>
 		</div>

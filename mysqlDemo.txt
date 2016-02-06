@@ -1,0 +1,17 @@
+CREATE TABLE User
+(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  userName VARCHAR(50) NOT NULL UNIQUE,
+  displayNAME VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE userEvent
+(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  userId INT NOT NULL,
+  eventId INT NOT NULL,
+  FOREIGN KEY (userId) REFERENCES User(id),
+  FOREIGN KEY (eventId) REFERENCES event(id)
+);
+$sql = "INSERT INTO user (userEmail, displayName, password) values ('jrjacob@gmail.com', 'Jason Jacobson', 'hello')";
+$db->exec($sql);
