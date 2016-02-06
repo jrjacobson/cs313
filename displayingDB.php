@@ -9,7 +9,7 @@
     $MAX_WORKOUTS = 1000;
     $user = 'jrjaco86';
     $password = 'help123';
-    $server = "localhost";
+    $server = "127.5.211.130";
     $currentUserEmail = "jrjacob@gmail.com";
     $userName;
     $sport[$MAX_WORKOUTS] = "";
