@@ -40,10 +40,10 @@
     </div>
     <div class="white">
       <form id = "userLogin" action = "workoutLogbook.php" method = "POST">
+        Journal:<input type="text" name="displayName" placeholder="eg. Joe Smith"><br>
         User email:<input type="email" name="email" placeholder="something@whatever.com"><br>
         User password:<input type="password" name="psw"><br>
-        <input type="submit" value = "Log Workout">
-        <a href="newUser.php">New User</a>
+        <input type="submit" value = "Create User">
       </form>
     </div>
   </div>
