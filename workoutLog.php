@@ -38,7 +38,7 @@
         <p>Here you can see all of your logged workouts</p>
       </div>
     </div>
-    <?php require "displayLog.php";?>
+    <?php require "displayLog.php"; // this should display my workout log?>
   </div>
 </body>
 </html>
