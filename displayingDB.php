@@ -43,20 +43,25 @@
   ini_set('display_errors', 'On');
   try
   {
-    /*
-    $dbHost = "127.5.211.130";
-    $dbUser = "jrjaco86";
-    $dbPassword = "help123";
-    $dbName = "php";
-    $db = new PDO('mysql:host=dbHost:$dbPort;dbname=$dbName', $dbUser, $dbPassword);
-    */
-    $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
-    $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
-    $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-    $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-    $dbName = "php";
-    $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
 
+    if ($openShiftVar === null || $openShiftVar == "")
+    {
+      $dbHost = "localhost";
+      $dbPort = "";
+      $dbUser = "jrjaco86";
+      $dbPassword = "help123";
+      $dbName = "workoutlog";
+    }
+    else
+    {
+      $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+      $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
+      $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+      $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+      $dbName = "php";
+    }
+    $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     //working with the database
     $MAX_WORKOUTS = 1000;
     $currentUserEmail = "jrjacob@gmail.com";
