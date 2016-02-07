@@ -31,18 +31,41 @@ hr {
 table{
   margin: auto;
   padding: auto;
+  width: 100%;
+}
 
-}
-td {
-  border-right-style: solid;
-  border-left-style: solid;
-  border-width: thin;
-  padding: 5px;
-}
 th{
   text-align: left;
   border-bottom-style: solid;
+}
+thead, tbody, tr, td, th {
+   display: block;
+ }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+tbody {
+    height: 200px;
+    overflow-y: auto;
+}
+tbody td, thead th {
+    width: 16.666%;
+    float: left;
+}
+select, input{
+  margin:8px;
+}
+.white{
+  border-radius:10px;
+  margin: auto;
   padding: 8px;
+  background-color: white;
+  width: 600px;
 }
 /*#8CC739 green #085DAD dblue #21BEDE lblue
  #FFFFFF white #31C3E7 bblue #ADB6B5 grey*/

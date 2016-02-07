@@ -49,25 +49,31 @@
       $rowIndex++;
     }
     echo '<h2>'.$userName.'</h2>';
-    echo '<table>
-    <tr>
-      <th>Sport</th>
-      <th>Weather</th>
-      <th>Tempreture</th>
-      <th>Distance</th>
-      <th>Duration</th>
-      <th>Journal</th>
-    </tr>';
+    echo '
+    <table>
+      <thead>
+      <tr>
+        <th>Sport</th>
+        <th>Weather</th>
+        <th>Tempreture</th>
+        <th>Distance</th>
+        <th>Duration</th>
+        <th>Journal</th>
+      </tr>
+      </thead>
+      <tbody>';
     for($i = 0; $i < $rowIndex; $i++)
     {
-      echo '<tr>
-        <td>'.$sport[$i].'</td>
-        <td>'.$weather[$i].'</td>
-        <td>'.$temp[$i].'</td>
-        <td>'.$distance[$i].'</td>
-        <td>'.$duration[$i].'</td>
-        <td>'.$journal[$i].'</td>
-      </tr>';
+      echo '
+        <tr>
+          <td class="filterable-cell">'.$sport[$i].'</td>
+          <td class="filterable-cell">'.$weather[$i].'</td>
+          <td class="filterable-cell">'.$temp[$i].'</td>
+          <td class="filterable-cell">'.$distance[$i].'</td>
+          <td class="filterable-cell">'.$duration[$i].'</td>
+          <td class="filterable-cell">'.$journal[$i].'</td>
+        </tr>';
     }
-    echo "</table>";
+    echo "</tbody>
+    </table>";
 ?>

@@ -27,18 +27,57 @@
   <div class="container">
     <div class="green navbar-nav space">
       <ul class="nav nav-pills" role="tablist">
-        <li role="presentation"><a href="index.html">Home</a></li>
+        <li role="presentation"><a href="index.php">Home</a></li>
         <li role="presentation"><a href="assignments.php">Assignments</a></li>
         <li role="presentation" class="active"><a href="workoutLog.php">Training Log</a></li>
       </ul>
     </div>
     <div class = "jumbotron text-center">
       <div class="container">
-        <h1>Welcome to Jason's Workout Log</h1>
+        <h1>Welcome to The Tri-Training Log</h1>
         <p>Here you can see all of your logged workouts</p>
       </div>
     </div>
-    <?php require "displayLog.php"; // this should display my workout log?>
-  </div>
-</body>
+<?php require "displayLog.php"; // this should display my workout log?>
+      <div class="white">
+        <h4 class="center">Add a workout to you training log</h4>
+        <form id = "logWorkout" action = "workoutLog.php" method = "POST">
+          Sport:<select name="sport">
+            <option value="1">Run</option>
+            <option value="2">Bike</option>
+            <option value="3">Swim</option>
+          </select>
+          Weather:<select name="weather">
+            <option value="1">Sunny</option>
+            <option value="2">Windy</option>
+            <option value="3">Rainy</option>
+            <option value="4">Cloudy</option>
+            <option value="5">Snowy</option>
+          </select>
+          Tempreture:<select name="temp">
+            <?php
+            for($i = -20; $i < 111; $i++)
+            {
+              if($i != 60)
+              {
+              echo '<option value="'.$i.' + 21">'.$i.'</option>';
+              }
+              else
+              {
+                echo '<option value="'.$i.' + 21" selected>'.$i.'</option>';
+              }
+            }
+            ?>
+          </select>
+          <br>
+          Date:<input type="datetime-local" name="date">
+          Distance:<input type="" name="distance" placeholder="In miles">
+          <br>
+          Duration:<input type="" name="duration" placeholder="In minutes">
+          Journal:<input type="textaria" name="journal" placeholder="How did you feel">
+          <br><input type="submit" value = "Log Workout">
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

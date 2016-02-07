@@ -22,8 +22,8 @@
 	      <div class="green navbar-nav space">
 	        <ul class="nav nav-pills" role="tablist">
 	          <li role="presentation" ><a href="index.php">Home</a></li>
-	          <li role="presentation" class="active"><a href="#">Assignments</a></li>
-						<li role="presentation"><a href="hello.php">HelloWorld</a></li>
+	          <li role="presentation" class="active"><a href="assignments.php">Assignments</a></li>
+						<li role="presentation"><a href="workoutLog.php">Training Log</a></li>
 					</ul>
 	      </div>
 
