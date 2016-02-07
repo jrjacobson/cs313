@@ -27,9 +27,9 @@
   <div class="container">
     <div class="green navbar-nav space">
       <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="index.html">Home</a></li>
         <li role="presentation"><a href="assignments.php">Assignments</a></li>
-          <li role="presentation"><a href="hello.php">HelloWorld</a></li>
+        <li role="presentation" class="active"><a href="workoutLog.php">Training Log</a></li>
       </ul>
     </div>
     <div class = "jumbotron text-center">
