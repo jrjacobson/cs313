@@ -39,7 +39,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<a href="getVote.php">My Pizza Poll</a><br>
-					<a href="displayingDB.php">DB Display</a>
+					<a href="workoutLog.php">DB Display</a>
 				</div>
 			</div>
 		</div>
