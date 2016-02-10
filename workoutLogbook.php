@@ -40,7 +40,7 @@
     </div>
 <?php require "displayLog.php"; // this should display my workout log?>
       <div class="white">
-        <h4 class="center">Add a workout to you training log</h4>
+        <h4 class="center">Add a workout to your training log</h4>
         <form id = "logWorkout" action = "workoutLog.php" method = "POST">
           Sport:<select name="sport">
             <option value="1">Run</option>
