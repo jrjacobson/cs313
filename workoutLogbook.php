@@ -1,3 +1,9 @@
+<?php session_start();
+if (!isset($_SESSION["userId"]))
+{
+    header("Location:workoutLog.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +47,7 @@
 <?php require "displayLog.php"; // this should display my workout log?>
       <div class="white">
         <h4 class="center">Add a workout to your training log</h4>
-        <form id = "logWorkout" action = "workoutLog.php" method = "POST">
+        <form id = "logWorkout" action = "addToLog.php" method = "POST">
           Sport:<select name="sport">
             <option value="1">Run</option>
             <option value="2">Bike</option>
@@ -60,11 +66,11 @@
             {
               if($i != 60)
               {
-              echo '<option value="'.$i.' + 21">'.$i.'</option>';
+              echo '<option value="'.$i.'">'.$i.'</option>';
               }
               else
               {
-                echo '<option value="'.$i.' + 21" selected>'.$i.'</option>';
+                echo '<option value="'.$i.'"selected>'.$i.'</option>';
               }
             }
             ?>

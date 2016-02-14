@@ -1,6 +1,7 @@
-<?php require "dbObject.php";
+<?php
+    require "dbObject.php";
     $MAX_WORKOUTS = 1000;
-    $currentUserEmail = "jrjacob@gmail.com";
+    $currentUserEmail = $_SESSION["userEmail"];
     $userName = "";
     $sport[$MAX_WORKOUTS] = "";
     $temp[$MAX_WORKOUTS] = 0;

@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,8 +39,29 @@
         <p>If you don't have a user name and password create a new user</p>
       </div>
     </div>
+      <?php
+      if(isset($_POST['email']))
+      {
+          require "dbObject.php";
+          $email = $_POST['email'];
+          $pass = $_POST['psw'];
+          $sql = "SELECT * FROM user WHERE userEmail ='".$email."'";
+          foreach($db->query($sql) as $row)
+          {
+              if($pass == $row['password'])
+              {
+                  $_SESSION["userEmail"] = $email;
+                  $_SESSION["userId"] = $row['id'];
+                  header("Location:workoutLogBook.php");
+              }
+              else{
+                  echo '<p>Invalid user email or password</p>';
+              }
+          }
+      }
+      ?>
     <div class="white">
-      <form id = "userLogin" action = "workoutLogbook.php" method = "POST">
+      <form id = "userLogin" action = "workoutLog.php" method = "POST">
         User email:<input type="email" name="email" placeholder="something@whatever.com"><br>
         User password:<input type="password" name="psw"><br>
         <input type="submit" value = "Log Workout">
