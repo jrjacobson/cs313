@@ -57,7 +57,7 @@
         <th>Sport</th>
         <th>Weather</th>
         <th>Tempreture</th>
-        <th>Distance</th>
+        <th>Miles</th>
         <th>Duration</th>
         <th>Journal</th>
       </tr>
@@ -70,7 +70,7 @@
           <td class="filterable-cell">'.$sport[$i].'</td>
           <td class="filterable-cell">'.$weather[$i].'</td>
           <td class="filterable-cell">'.$temp[$i].'</td>
-          <td class="filterable-cell">'.$distance[$i].'</td>
+          <td class="filterable-cell">'.number_format((float)$distance[$i]/1600, 2, '.','').'</td>
           <td class="filterable-cell">'.$duration[$i].'</td>
           <td class="filterable-cell">'.$journal[$i].'</td>
         </tr>';

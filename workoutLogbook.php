@@ -5,7 +5,7 @@ if (!isset($_SESSION["userId"]))
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -76,10 +76,15 @@ if (!isset($_SESSION["userId"]))
             ?>
           </select>
           <br>
-          Date:<input type="datetime-local" name="date">
-          Distance:<input type="number" name="distance" min="1" max="300" placeholder="In miles">
+          Distance:<input type="number" name="distance" min="0" step="0.001">
+          Units:<select name = "unit">
+          <option value="1600" selected>Miles</option>
+          <option value="1">Meters</option>
+          </select>
           <br>
-          Duration:<input type="number" name="duration" min="1" max="600" placeholder="In minutes">
+          Date:<input type="datetime-local" name="date">
+          <br>
+          Duration:<input type="number" name="duration" min="1" max="600" placeholder="Minutes">
           Journal:<input type="text" name="journal" placeholder="How did you feel">
           <br><input type="submit" value = "Log Workout">
         </form>
