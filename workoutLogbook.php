@@ -82,10 +82,10 @@ if (!isset($_SESSION["userId"]))
           <option value="1">Meters</option>
           </select>
           <br>
-          Date:<input type="datetime-local" name="date">
-          <br>
           Duration:<input type="number" name="duration" min="1" max="600" placeholder="Minutes">
           Journal:<input type="text" name="journal" placeholder="How did you feel">
+          <br>
+          Date:<input type="datetime-local" name="date">
           <br><input type="submit" value = "Log Workout">
         </form>
       </div>
