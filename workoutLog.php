@@ -52,7 +52,7 @@
               {
                   $_SESSION["userEmail"] = $email;
                   $_SESSION["userId"] = $row['id'];
-                  header("Location:workoutLogBook.php");
+                  header("Location:workoutLogbook.php");
               }
               else{
                   echo '<p>Invalid user email or password</p>';
