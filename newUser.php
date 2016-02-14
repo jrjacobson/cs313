@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,9 +39,33 @@
         <p>If you don't have a user name and password create a new user</p>
       </div>
     </div>
+    <?php
+    if(isset($_POST['email']))
+    {
+      require "dbObject.php";
+      $email = $_POST['email'];
+      $pass = $_POST['psw'];
+      $name = $_POST['displayName'];
+      $sql = "INSERT INTO user (userEmail, displayName, password) values ('".$email."', '".$name."', '".$pass."')";
+      $db->exec($sql);
+      $sql = "SELECT * FROM user WHERE userEmail ='".$email."'";
+      foreach($db->query($sql) as $row)
+      {
+        if($pass == $row['password'])
+        {
+          $_SESSION["userEmail"] = $email;
+          $_SESSION["userId"] = $row['id'];
+          header("Location:workoutLogbook.php");
+        }
+        else{
+          echo '<p>This email is already in use</p>';
+        }
+      }
+    }
+    ?>
     <div class="white">
-      <form id = "userLogin" action = "workoutLogbook.php" method = "POST">
-        Journal:<input type="text" name="displayName" placeholder="eg. Joe Smith"><br>
+      <form id = "userLogin" action = "newUser.php" method = "POST">
+        Name:<input type="text" name="displayName" placeholder="eg. Joe Smith"><br>
         User email:<input type="email" name="email" placeholder="something@whatever.com"><br>
         User password:<input type="password" name="psw"><br>
         <input type="submit" value = "Create User">
