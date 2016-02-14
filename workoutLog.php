@@ -64,7 +64,7 @@
       <form id = "userLogin" action = "workoutLog.php" method = "POST">
         User email:<input type="email" name="email" placeholder="something@whatever.com"><br>
         User password:<input type="password" name="psw"><br>
-        <input type="submit" value = "Log Workout">
+        <input type="submit" value = "Log In">
         <a href="newUser.php">New User</a>
       </form>
     </div>
