@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php session_start();
+require "password.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +50,7 @@
           $sql = "SELECT * FROM user WHERE userEmail ='".$email."'";
           foreach($db->query($sql) as $row)
           {
-              if($pass == $row['password'])
+              if(password_verify($pass, $row['password']))
               {
                   $_SESSION["userEmail"] = $email;
                   $_SESSION["userId"] = $row['id'];

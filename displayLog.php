@@ -49,6 +49,10 @@
       $journal[$rowIndex] = $row['journal'];
       $rowIndex++;
     }
+    if($rowIndex == 0)
+    {
+     echo '<p>It sure is sad to have an empty training log. Add items to you log book with the form at the bottom of the page</p>';
+    }
     echo '<h2>'.$userName.'</h2>';
     echo '
     <table>
@@ -75,6 +79,6 @@
           <td class="filterable-cell">'.$journal[$i].'</td>
         </tr>';
     }
-    echo "</tbody>
-    </table>";
+    echo '</tbody>
+    </table>';
 ?>

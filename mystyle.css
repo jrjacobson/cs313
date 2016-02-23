@@ -35,7 +35,6 @@ table{
 }
 
 th{
-  text-align: left;
   border-bottom-style: solid;
 }
 thead, tbody, tr, td, th {
@@ -54,6 +53,7 @@ tbody {
     overflow-y: auto;
 }
 tbody td, thead th {
+    text-align: left;
     width: 16.666%;
     float: left;
 }

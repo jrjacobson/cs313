@@ -60,7 +60,7 @@ if (!isset($_SESSION["userId"]))
             <option value="4">Cloudy</option>
             <option value="5">Snowy</option>
           </select>
-          Tempreture:<select name="temp">
+          Temperature:<select name="temp">
             <?php
             for($i = -20; $i < 111; $i++)
             {

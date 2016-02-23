@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php session_start();
+require "password.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,13 +47,15 @@
       require "dbObject.php";
       $email = $_POST['email'];
       $pass = $_POST['psw'];
+      $hashPass = password_hash($pass, PASSWORD_DEFAULT);
       $name = $_POST['displayName'];
-      $sql = "INSERT INTO user (userEmail, displayName, password) values ('".$email."', '".$name."', '".$pass."')";
+      $sql = "INSERT INTO user (userEmail, displayName, password) values ('".$email."', '".$name."', '".$hashPass."')";
       $db->exec($sql);
+      header("Location:workoutLog.php");
       $sql = "SELECT * FROM user WHERE userEmail ='".$email."'";
       foreach($db->query($sql) as $row)
       {
-        if($pass == $row['password'])
+        if(password_verify($pass, $row['password']))
         {
           $_SESSION["userEmail"] = $email;
           $_SESSION["userId"] = $row['id'];

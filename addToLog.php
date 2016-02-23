@@ -10,8 +10,6 @@
     $dur = $_POST["duration"];
     $journal = $_POST["journal"];
     $sql = "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (".$user.", ".$sport.", ".$weather.", ".$temp.", '".$date."', ".$dist.", ".$dur.", '".$journal."')";
-    echo $sql;
     $db->exec($sql);
     header("Location:workoutLogbook.php");
 ?>
-
