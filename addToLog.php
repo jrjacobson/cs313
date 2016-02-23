@@ -1,12 +1,12 @@
 <?php
     session_start();
     require "dbObject.php";
-
+/*
     for($i = -20; $i < 111; $i++)
     {
         $sql = "INSERT INTO temp (temp) values ($i)";
         $db->exec($sql);
-    }
+    }*/
     $sql = "INSERT INTO sport (title) values ('Run')";
     $sql += "INSERT INTO sport (title) values ('Bike')";
     $sql += "INSERT INTO sport (title) values ('Swim')";
