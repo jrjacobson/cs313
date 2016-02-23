@@ -30,7 +30,12 @@ catch (PDOException $ex)
    echo 'Error!: ' . $ex->getMessage();
    die();
 }
-/*
+
+for($i = -20; $i < 111; $i++)
+{
+  $sql = "INSERT INTO temp (temp) values ($i)";
+  $db->exec($sql);
+}
     $sql = "INSERT INTO sport (title) values ('Run')";
     $sql += "INSERT INTO sport (title) values ('Bike')";
     $sql += "INSERT INTO sport (title) values ('Swim')";
@@ -39,14 +44,12 @@ catch (PDOException $ex)
     $sql += "INSERT INTO weather (title) values ('Rainy')";
     $sql += "INSERT INTO weather (title) values ('Cloudy')";
     $sql += "INSERT INTO weather (title) values ('Snowy')";
-    $sql += "INSERT INTO user (userEmail, displayName, password) values ('jrjacob@gmail.com', 'Jason Jacobson', 'hello')";
-    $sql += "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (1, 1, 1, 35, '2016-02-02 13:43:00', 5, 40, 'I had a great run!')";
+$db->exec($sql);
+    $sql = "INSERT INTO user (userEmail, displayName, password) values ('jrjacob@gmail.com', 'Jason Jacobson', 'hello')";
+$db->exec($sql);
+    $sql = "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (1, 1, 1, 35, '2016-02-02 13:43:00', 5, 40, 'I had a great run!')";
     $sql += "INSERT INTO workout (userId, sportId, weatherId, tempId, date, distance, duration, journal) values (1, 1, 1, 40, '2016-03-02 13:43:00', 6, 47, 'Another great run!')";
     $db->exec($sql);
-    for($i = -20; $i < 111; $i++)
-    {
-      $sql = "INSERT INTO temp (temp) values ($i)";
-      $db->exec($sql);
-    }
-*/
+
+
 ?>
